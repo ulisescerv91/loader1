@@ -1,6 +1,7 @@
 negro=#272822
 rojo=#F92659
 azul=#66D9EF
+verde=#A6E22E
 body 
 	margin 0
 	padding 0
@@ -14,8 +15,19 @@ body
 		color white
 		display flex
 		.preloader 
-			background rojo
-			color azul
+			background verde
 			//este propiedad con el Displa Flex, centra en todos sus lados al elemento
 			margin auto
+			height 40px
+			width 350px
+			position relative
+			span
+				color negro
+				font-weight bold
+				font-size 25px
+				line-height 40px
+				//Centar el span
+				position absolute 
+				left 50%
+				transform translateX(-50%)
 			
