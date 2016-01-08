@@ -15,7 +15,7 @@ body
 		color white
 		display flex
 		.preloader 
-			background verde
+			background white
 			//este propiedad con el Displa Flex, centra en todos sus lados al elemento
 			margin auto
 			height 40px
@@ -30,4 +30,58 @@ body
 				position absolute 
 				left 50%
 				transform translateX(-50%)
+		.preloader:before
+			content: '';
+			position absolute
+			//este propiedad sera lo que cambia para dar el efecto del loader
+			width 0
+			height 40px
+			top 0
+			left 0
+			background verde
+			//animacion que hace el efecto
+			animation: loading 5s infinite
+		@keyframes loading
+			90%
+				opacity 1
+			100%
+				width 100%
+				opacity 0
+		.loader 
+			background rojo
+			width 50px
+			height 50px
+			border-radius 50px 
+			display flex
+			position: absolute 
+			left 50%
+			top 50px
+			margin-left -25px
+			span
+				//centar el texto a la mitad del contenedor
+				line-height 50px
+				margin auto
+				height 20px
+				width 20px 
+				border-radius: 20px;
+				background azul
+				 
+		.loader 
+			animation: blink 0.5s infinite
+		@keyframes blink
+			0%
+				visibility: visible
+			50%
+				visibility: hidden
+			100%
+				visibility: hidden
+					
+	.cerrar
+		//clase para dar el efecto de cerrar
+		transform translateY(-100%)
+		transition all 0.5s
+				
+						
+			
+			
 			
